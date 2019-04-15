@@ -1,0 +1,51 @@
+{
+  "name": "mocha-chai-test",
+  "version": "1.0.0",
+  "description": "Demo app for unit testing using Mocha-Chai",
+  "main": "app.js",
+  "scripts": {
+    "test": "nyc mocha -r ts-node/register test/*.test.ts"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.tsx"
+    ],
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reena-Koudi/Mocha-Chai-Istanbul.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Reena-Koudi/Mocha-Chai-Istanbul/issues"
+  },
+  "homepage": "https://github.com/Reena-Koudi/Mocha-Chai-Istanbul#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.12.1",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "source-map-support": "^0.5.11",
+    "ts-node": "^8.0.3",
+    "tslint": "^5.14.0",
+    "typings": "^2.1.1"
+  },
+  "dependencies": {}
+}
